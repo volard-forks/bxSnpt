@@ -2,155 +2,377 @@
 
 <templateSet group="bitrixComponents">
 
-    <template name="stp" value="SITE_TEMPLATE_PATH" description="SITE_TEMPLATE_PATH" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="spu" value="SECTION_PAGE_URL" description="SECTION_PAGE_URL" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="props" value="PROPERTIES" description="PROPERTIES" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="pret" value="PREVIEW_TEXT" description="PREVIEW_TEXT" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="prepic" value="PREVIEW_PICTURE" description="PREVIEW_PICTURE" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="dpu" value="DETAIL_PAGE_URL" description="DETAIL_PAGE_URL" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="disv" value="DISPLAY_VALUE" description="DISPLAY_VALUE" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="disp" value="DISPLAY_PROPERTIES" description="DISPLAY_PROPERTIES" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="dett" value="DETAIL_TEXT" description="DETAIL_TEXT" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="detpic" value="DETAIL_PICTURE" description="DETAIL_PICTURE" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="curr" value="CURRENCY" description="CURRENCY" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="arr" value="$arResult" description="$arResult" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="arf" value="$arField" description="$arField" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="are" value="$arElement" description="$arElement" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="arbi" value="$arBasketItem" description="$arBasketItem" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="app" value="$APPLICATION" description="$APPLICATION" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="getid" value="&lt;?  &#10;$this-&gt;AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem[&quot;IBLOCK_ID&quot;], &quot;ELEMENT_EDIT&quot;));&#10;$this-&gt;AddDeleteAction(&#10;    $arItem['ID'],$arItem['DELETE_LINK'], &#10;    CIBlock::GetArrayByID($arItem[&quot;IBLOCK_ID&quot;], &quot;ELEMENT_DELETE&quot;), &#10;    array(&quot;CONFIRM&quot; =&gt;GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM'))&#10;);&#10;$id = $this-&gt;GetEditAreaId($arItem['ID']);&#10;?&gt;" description="я хз" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="items" value="&lt;?if ($arResult[&quot;ITEMS&quot;])&#10;{&#10;    if($arParams[&quot;DISPLAY_TOP_PAGER&quot;])&#10;    {&#10;        echo $arResult[&quot;NAV_STRING&quot;];&#10;    }&#10;    &#10;    foreach ($arResult[&quot;ITEMS&quot;] as $i =&gt; $arItem)&#10;    {&#10;        $this-&gt;AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem[&quot;IBLOCK_ID&quot;], &quot;ELEMENT_EDIT&quot;));&#10;        $this-&gt;AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem[&quot;IBLOCK_ID&quot;], &quot;ELEMENT_DELETE&quot;), array(&quot;CONFIRM&quot; =&gt; GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));&#10;        $id = $this-&gt;GetEditAreaId($arItem['ID']);&#10;        ?&gt;&#10;        &lt;div id=&quot;&lt;?=$id?&gt;&quot;&gt;&#10;            $END$&#10;        &lt;/div&gt;&#10;        &lt;? &#10;    } ?&gt;&#10;    &#10;    &lt;? if($arParams[&quot;DISPLAY_BOTTOM_PAGER&quot;])&#10;    {   &#10;       echo $arResult[&quot;NAV_STRING&quot;];&#10;    }&#10;} ?&gt;" description="Шаблон списка новостей" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="addcss" value="$APPLICATION-&gt;SetAdditionalCSS(SITE_TEMPLATE_PATH . $END$);" description="Добавление CSS" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="addjs" value="$APPLICATION-&gt;AddHeadScript(SITE_TEMPLATE_PATH . $END$);" description="Добавляет JS" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="cache" value="$this-&gt;__component-&gt;SetResultCacheKeys(array(&quot;$END$&quot;));" description="Добавить в кеш компонента новую переменную" toReformat="false" toShortenFQNames="true" />
-    <template name="egl" value="$arOrder = array(&quot;SORT&quot; =&gt; &quot;ASC&quot;); $arFilter = array($END$);&#10;$arSelectFields = array(&quot;ID&quot;, &quot;ACTIVE&quot;, &quot;NAME&quot;);&#10;$rsElements = CIBlockElement::GetList($arOrder, $arFilter, FALSE, FALSE, $arSelectFields);&#10;while($arElement = $rsElements-&gt;GetNext())&#10;{&#10;    &#10;}" description="Получить элементы из инфоблока" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="filter" value="&quot;ACTIVE&quot; =&gt; &quot;Y&quot;, &quot;SECTION_GLOBAL_ACTIVE&quot; =&gt; &quot;Y&quot;, &quot;ACTIVE_DATE&quot; =&gt; &quot;Y&quot;" description="Фильтрация по активности" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="ibl" value="CModule::IncludeModule(&quot;iblock&quot;)" description="Подключение модуля информационных блоков" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="isindex" value="$isIndex = $APPLICATION-&gt;GetCurPage(false) == SITE_DIR;" description="Проверка является ли текущая страница главной" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="ispage" value="strpos($APPLICATION-&gt;GetCurUri(), '/$END$/') !== false;" description="Проверка на наличие /&lt;название_раздела&gt;/ в адресе" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="m2l" value="AddMessage2Log($END$);" description="Add message to log" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="m2lpr" value="AddMessage2Log(print_r($END$, TRUE));" description="print_r message to log" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="res" value="$arImg = CFile::ResizeImageGet($END$, array('width' =&gt; 150, 'height' =&gt; 85));" description="Resize изображения" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="res2" value="if (isset($arParams[&quot;RESIZE_TYPE&quot;]) &amp;&amp; $arParams[&quot;RESIZE_TYPE&quot;] != -1 &amp;&amp; $arParams[&quot;WIDTH&quot;] &amp;&amp; $arParams[&quot;HEIGHT&quot;]) {&#10;    foreach ($arResult[&quot;ITEMS&quot;] as &amp;$arItem)&#10;    {&#10;        if ($arItem[&quot;PREVIEW_PICTURE&quot;])&#10;        {&#10;            $arImg = CFile::ResizeImageGet($arItem[&quot;PREVIEW_PICTURE&quot;], array(&quot;width&quot; =&gt; $arParams[&quot;WIDTH&quot;], &quot;height&quot; =&gt;$arParams[&quot;HEIGHT&quot;]), intval($arParams[&quot;RESIZE_TYPE&quot;]), true);&#10;            if ($arImg)&#10;            {&#10;                $arItem[&quot;PREVIEW_PICTURE&quot;][&quot;SRC&quot;] = $arImg[&quot;src&quot;];&#10;                $arItem[&quot;PREVIEW_PICTURE&quot;][&quot;WIDTH&quot;] = $arImg[&quot;width&quot;];&#10;                $arItem[&quot;PREVIEW_PICTURE&quot;][&quot;HEIGHT&quot;] = $arImg[&quot;height&quot;];&#10;            }&#10;        }&#10;    } }" description="Продвинутый resize изображения" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
-    <template name="sgl" value="$arSort = array(&quot;SORT&quot; =&gt; &quot;ASC&quot;); $arFilter = array(&quot;IBLOCK_ID&quot; =&gt; $arParams[&quot;IBLOCK_ID&quot;], &quot;ID&quot; =&gt; $END$);&#10;$rsSections = CIBlockSection::GetList($arSort, $arFilter);&#10;while ($arSection = $rsSections-&gt;GetNext())&#10;{&#10;   &#10;}" description="Получение элементов секции инфоблока" toReformat="false" toShortenFQNames="true">
-    <context>
-        <option name="PHP" value="true" />
-    </context>
-    </template>
+<template name="product" value="\Bitrix\Catalog\ProductTable" description="\Bitrix\Catalog\ProductTable [Таблица товаров]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="store" value="\Bitrix\Catalog\StoreTable" description="\Bitrix\Catalog\StoreTable [Таблица складов]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="enum" value="\Bitrix\Iblock\PropertyEnumerationTable" description="\Bitrix\Iblock\PropertyEnumerationTable [Таблица вариантов списков ИБ]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="sect" value="\Bitrix\Iblock\SectionTable" description="\Bitrix\Iblock\SectionTable [Таблица разделов ИБ]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="prop" value="\Bitrix\Iblock\PropertyTable" description="\Bitrix\Iblock\PropertyTable [Таблица свойств ИБ]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="iblock" value="\Bitrix\Iblock\IblockTable" description="\Bitrix\Iblock\IblockTable [Таблица ИБ]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="element" value="\Bitrix\Iblock\ElementTable" description="\Bitrix\Iblock\ElementTable [Таблица элментов ИБ]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="site" value="\Bitrix\Main\SiteTable" description="\Bitrix\Main\SiteTable [Таблица сайтов]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="group" value="\Bitrix\Main\GroupTable" description="\Bitrix\Main\GroupTable [Таблица групп]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="file" value="\Bitrix\Main\FileTable" description="\Bitrix\Main\FileTable [Таблица файлов]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="cache" value="\Bitrix\Main\Data\Cache" description="\Bitrix\Main\Data\Cache [Кеш]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="em" value="\Bitrix\Main\EventManager" description="\Bitrix\Main\EventManager [Менеджер событий]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="ex" value="\Bitrix\Main\SystemException" description="\Bitrix\Main\SystemException [Корневое исключение в Битриксе]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="event" value="\Bitrix\Main\Mail\Event" description="\Bitrix\Main\Mail\Event [Почтовое событие]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="uri" value="\Bitrix\Main\Web\Uri" description="\Bitrix\Main\Web\Uri [Uri]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="asset" value="\Bitrix\Main\Page\Asset" description="\Bitrix\Main\Page\Asset [Зависимости в вёрстке]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="diagdebug" value="\Bitrix\Main\Diag\Debug" description="\Bitrix\Main\Diag\Debug [Отладчик]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="loader" value="\Bitrix\Main\Loader" description="\Bitrix\Main\Loader [Загрузчик модулей]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="loc" value="\Bitrix\Main\Localization\Loc" description="\Bitrix\Main\Localization\Loc [Локализация]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="opt" value="\Bitrix\Main\Config\Option" description="\Bitrix\Main\Config\Option [Настройки модулей]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="application" value="\Bitrix\Main\Application" description="\Bitrix\Main\Application [Приложение]" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="buy" value="\Bitrix\Catalog\Product\Basket::addProduct([     'PRODUCT_ID' =&gt; $PRODUCT_ID$,&#10;    'QUANTITY' =&gt; 1, ]);" description="Добавление товара в корзину" toReformat="false" toShortenFQNames="true">
+  <variable name="PRODUCT_ID" expression="" defaultValue="" alwaysStopAt="true" />
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="getlist" value="getList(array(    &#10;    'select' =&gt; array('ID', 'CNT', $SELECT$),&#10;    'filter' =&gt; array($FILTER$),&#10;    'group' =&gt; array($GROUP$),&#10;    'order' =&gt; array('ID'),&#10;    'limit' =&gt; $LIMIT$,&#10;    'offset' =&gt; 0,&#10;    'runtime' =&gt; array(&#10;        new \Bitrix\Main\ORM\Fields\ExpressionField('CNT', 'COUNT(*)')&#10;    ),&#10;    'cache' =&gt; array(&#10;        'ttl' =&gt; 3600,&#10;        'cache_joins' =&gt; true,&#10;    ), )&#10;);" description="Полный getList к новым сущностям в ядре d7" toReformat="false" toShortenFQNames="true">
+  <variable name="SELECT" expression="" defaultValue="" alwaysStopAt="true" />
+  <variable name="FILTER" expression="" defaultValue="" alwaysStopAt="true" />
+  <variable name="GROUP" expression="" defaultValue="" alwaysStopAt="true" />
+  <variable name="LIMIT" expression="" defaultValue="" alwaysStopAt="true" />
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="tarp" value="$this-&gt;arParams" description="$this-&gt;arParams" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="tarr" value="$this-&gt;arResult" description="$this-&gt;arResult" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="request" value="\Bitrix\Main\Application::getInstance()-&gt;getContext()-&gt;getRequest()" description="Получение объекта запроса — альтернатива работе с $_REQUEST, $_POST, $_GET." toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="send" value="\Bitrix\Main\Mail\Event::send(array(     &quot;EVENT_NAME&quot; =&gt; &quot;NEW_USER&quot;,&#10;    &quot;LID&quot; =&gt; &quot;s1&quot;,&#10;    &quot;C_FIELDS&quot; =&gt; array(&#10;        &quot;EMAIL&quot; =&gt; &quot;info@intervolga.ru&quot;,&#10;        $END$&#10;    ), ));" description="Создание почтового события и регистрация его для отправки" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="root" value="\Bitrix\Main\Application::getDocumentRoot()" description="Получение пути до корня сайта." toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="od" value="\Bitrix\Main\Config\Option::delete('main', array(     'name' =&gt; 'max_file_size',&#10;    'site_id' =&gt; 's2',&#10;    ) );" description="Config option delete" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="os" value="\Bitrix\Main\Config\Option::set(‘main’, 'max_file_size', $END$);" description="Config option set" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="og" value="\Bitrix\Main\Config\Option::get('main', 'max_file_size')" description="Get config option" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="gm" value="\Bitrix\Main\Localization\Loc::getMessage('$END$')" description="Получение lang-строки" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="loadm" value="\Bitrix\Main\Localization\Loc::loadMessages(__FILE__);" description="Загрузка lang-переменных текущего файла" toReformat="false" toShortenFQNames="true" />
+<template name="isajax" value="\Bitrix\Main\Application::getInstance()-&gt;getContext()-&gt;getRequest()-&gt;isAjaxRequest()" description="Простая проверка, по Ajax ли запрашивается текущая страница" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="addstr" value="\Bitrix\Main\Page\Asset::getInstance()-&gt;addString($END$);" description="Добавление строки (в head)" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="die" value="die(__FILE__ . &quot;:&quot; . __LINE__)" description="Если страница завершилась, то хотя бы будет видно, в каком это было файле и на какой строке" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="labels" value="\Bitrix\Main\Diag\Debug::getTimeLabels()" description="Получение всех замеров по коду" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="label" value="\Bitrix\Main\Diag\Debug::startTimeLabel('$NAME$'); &#10;// track execution time&#10;$END$&#10;// track execution time&#10;\Bitrix\Main\Diag\Debug::endTimeLabel('$NAME$');" description="Отладочная печать прямо в журнал событий Битрикса" toReformat="false" toShortenFQNames="true">
+  <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="debugdb" value="\CEventLog::add(array(     'AUDIT_TYPE_ID' =&gt; 'DEBUG',&#10;    'ITEM_ID' =&gt; __FILE__ . ':' . __LINE__,&#10;    'DESCRIPTION' =&gt; print_r($END$, TRUE),&#10;));" description="Отладочная печать прямо в журнал событий Битрикса" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="phpdebug" value="$tempFile = fopen($_SERVER['DOCUMENT_ROOT'] . '/log/__bx_log.log', 'a'); fwrite(&#10;    $tempFile,&#10;    __FILE__ . ':' . __LINE__ . PHP_EOL . '(' . date('Y-m-d H:i:s').')' . PHP_EOL&#10;    . print_r($END$, TRUE)&#10;    . PHP_EOL . PHP_EOL&#10;);&#10;fclose($tempFile);&#10;/*&#10;Не забудьте только создать каталог /log/ в проекте и закрыть его от просмотра через браузер с помощью .htaccess.&#10;*/" description="Отладка в файл (чистый php)" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="debug" value="\Bitrix\Main\Diag\Debug::writeToFile(__FILE__ . ':' . __LINE__ . &quot;\n(&quot; . date('Y-m-d H:i:s').&quot;)\n&quot; . print_r($END$, TRUE) . &quot;\n\n&quot;, '', 'log/__debug.log');" description="Отладка в файл" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="prrc" value="echo __FILE__ . ':' . __LINE__ . PHP_EOL . print_r($END$, true). PHP_EOL;" description="Отладка в консоль" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="prrh" value="echo '&lt;pre style=\'display: none;\'&gt;' . __FILE__ . ':' . __LINE__ . ':&lt;br&gt;' . print_r($END$, true) . '&lt;/pre&gt;';" description="Файл и номер строки вызова сктрытой отладки" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="prr" value="echo '&lt;pre&gt;' . __FILE__ . ':' . __LINE__ . ':&lt;br&gt;' . print_r($END$, true) . '&lt;/pre&gt;';" description="Файл вызова отладки" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="addcss" value="\Bitrix\Main\Page\Asset::getInstance()-&gt;addCss(SITE_TEMPLATE_PATH . $END$);&#10;" description="Добавление CSS" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="addjs" value="\Bitrix\Main\Page\Asset::getInstance()-&gt;addJs(SITE_TEMPLATE_PATH . $END$);&#10;" description="Добавляет JS" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="app" value="$APPLICATION" description="$APPLICATION" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="arbi" value="$arBasketItem" description="$arBasketItem" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="are" value="$arElement" description="$arElement" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="arf" value="$arField" description="$arField" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="arr" value="$arResult" description="$arResult" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="setcache" value="$this-&gt;__component-&gt;SetResultCacheKeys(array(&quot;$END$&quot;));" description="Добавить в кеш компонента новую переменную" toReformat="false" toShortenFQNames="true" />
+<template name="curr" value="CURRENCY" description="CURRENCY" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="detpic" value="DETAIL_PICTURE" description="DETAIL_PICTURE" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="dett" value="DETAIL_TEXT" description="DETAIL_TEXT" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="disp" value="DISPLAY_PROPERTIES" description="DISPLAY_PROPERTIES" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="disv" value="DISPLAY_VALUE" description="DISPLAY_VALUE" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="dpu" value="DETAIL_PAGE_URL" description="DETAIL_PAGE_URL" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="egl" value="$arOrder = array(&quot;SORT&quot; =&gt; &quot;ASC&quot;); $arFilter = array($END$);&#10;$arSelectFields = array(&quot;ID&quot;, &quot;ACTIVE&quot;, &quot;NAME&quot;);&#10;$rsElements = CIBlockElement::GetList($arOrder, $arFilter, FALSE, FALSE, $arSelectFields);&#10;while($arElement = $rsElements-&gt;GetNext())&#10;{&#10;    &#10;}" description="Получить элементы из инфоблока" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="filter" value="&quot;ACTIVE&quot; =&gt; &quot;Y&quot;, &quot;SECTION_GLOBAL_ACTIVE&quot; =&gt; &quot;Y&quot;, &quot;ACTIVE_DATE&quot; =&gt; &quot;Y&quot;" description="Фильтрация по активности" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="getid" value="&lt;?  &#10;$this-&gt;AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem[&quot;IBLOCK_ID&quot;], &quot;ELEMENT_EDIT&quot;));&#10;$this-&gt;AddDeleteAction(&#10;    $arItem['ID'],$arItem['DELETE_LINK'], &#10;    CIBlock::GetArrayByID($arItem[&quot;IBLOCK_ID&quot;], &quot;ELEMENT_DELETE&quot;), &#10;    array(&quot;CONFIRM&quot; =&gt;GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM'))&#10;);&#10;$id = $this-&gt;GetEditAreaId($arItem['ID']);&#10;?&gt;" description="я хз" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="ibl" value="\Bitrix\Main\Loader::includeModule('iblock')&#10;" description="Подключение модуля информационных блоков" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="isindex" value="$isIndex = $APPLICATION-&gt;GetCurPage(false) == SITE_DIR;" description="Проверка является ли текущая страница главной" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="ispage" value="strpos($APPLICATION-&gt;GetCurUri(), '/$END$/') !== false;" description="Проверка на наличие /&lt;название_раздела&gt;/ в адресе" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="items" value="&lt;?if ($arResult[&quot;ITEMS&quot;])&#10;{&#10;    if($arParams[&quot;DISPLAY_TOP_PAGER&quot;])&#10;    {&#10;        echo $arResult[&quot;NAV_STRING&quot;];&#10;    }&#10;    &#10;    foreach ($arResult[&quot;ITEMS&quot;] as $i =&gt; $arItem)&#10;    {&#10;        $this-&gt;AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem[&quot;IBLOCK_ID&quot;], &quot;ELEMENT_EDIT&quot;));&#10;        $this-&gt;AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem[&quot;IBLOCK_ID&quot;], &quot;ELEMENT_DELETE&quot;), array(&quot;CONFIRM&quot; =&gt; GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));&#10;        $id = $this-&gt;GetEditAreaId($arItem['ID']);&#10;        ?&gt;&#10;        &lt;div id=&quot;&lt;?=$id?&gt;&quot;&gt;&#10;            $END$&#10;        &lt;/div&gt;&#10;        &lt;? &#10;    } ?&gt;&#10;    &#10;    &lt;? if($arParams[&quot;DISPLAY_BOTTOM_PAGER&quot;])&#10;    {   &#10;       echo $arResult[&quot;NAV_STRING&quot;];&#10;    }&#10;} ?&gt;" description="Шаблон списка новостей" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="m2l" value="AddMessage2Log($END$);" description="Add message to log" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="m2lpr" value="AddMessage2Log(print_r($END$, TRUE));" description="print_r message to log" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="prepic" value="PREVIEW_PICTURE" description="PREVIEW_PICTURE" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="pret" value="PREVIEW_TEXT" description="PREVIEW_TEXT" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="props" value="PROPERTIES" description="PROPERTIES" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="res" value="$arImg = CFile::ResizeImageGet($END$, array('width' =&gt; 150, 'height' =&gt; 85));" description="Resize изображения" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="res2" value="if (isset($arParams[&quot;RESIZE_TYPE&quot;]) &amp;&amp; $arParams[&quot;RESIZE_TYPE&quot;] != -1 &amp;&amp; $arParams[&quot;WIDTH&quot;] &amp;&amp; $arParams[&quot;HEIGHT&quot;]) {&#10;    foreach ($arResult[&quot;ITEMS&quot;] as &amp;$arItem)&#10;    {&#10;        if ($arItem[&quot;PREVIEW_PICTURE&quot;])&#10;        {&#10;            $arImg = CFile::ResizeImageGet($arItem[&quot;PREVIEW_PICTURE&quot;], array(&quot;width&quot; =&gt; $arParams[&quot;WIDTH&quot;], &quot;height&quot; =&gt;$arParams[&quot;HEIGHT&quot;]), intval($arParams[&quot;RESIZE_TYPE&quot;]), true);&#10;            if ($arImg)&#10;            {&#10;                $arItem[&quot;PREVIEW_PICTURE&quot;][&quot;SRC&quot;] = $arImg[&quot;src&quot;];&#10;                $arItem[&quot;PREVIEW_PICTURE&quot;][&quot;WIDTH&quot;] = $arImg[&quot;width&quot;];&#10;                $arItem[&quot;PREVIEW_PICTURE&quot;][&quot;HEIGHT&quot;] = $arImg[&quot;height&quot;];&#10;            }&#10;        }&#10;    } }" description="Продвинутый resize изображения" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="sgl" value="$arSort = array(&quot;SORT&quot; =&gt; &quot;ASC&quot;); $arFilter = array(&quot;IBLOCK_ID&quot; =&gt; $arParams[&quot;IBLOCK_ID&quot;], &quot;ID&quot; =&gt; $END$);&#10;$rsSections = CIBlockSection::GetList($arSort, $arFilter);&#10;while ($arSection = $rsSections-&gt;GetNext())&#10;{&#10;   &#10;}" description="Получение элементов секции инфоблока" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="spu" value="SECTION_PAGE_URL" description="SECTION_PAGE_URL" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
+<template name="stp" value="SITE_TEMPLATE_PATH" description="SITE_TEMPLATE_PATH" toReformat="false" toShortenFQNames="true">
+  <context>
+    <option name="PHP" value="true" />
+  </context>
+</template>
 </templateSet>
