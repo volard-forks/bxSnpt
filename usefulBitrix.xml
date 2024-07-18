@@ -63,7 +63,7 @@
     <option name="PHP" value="true" />
   </context>
 </template>
-<template name="console_log" value="echo '&lt;script&gt;console.log(&quot;BIG DEV LABEL&quot;);&lt;/script&gt;';&#10;echo '&lt;script&gt;console.log(' . $json_encode($end$, JSON_HEX_TAG) . ');&lt;/script&gt;';" description="Outputs to console" toReformat="false" toShortenFQNames="true">
+<template name="console_log" value="echo '&lt;script&gt;console.log(&quot;BIG DEV LABEL&quot;);&lt;/script&gt;';&#10;echo '&lt;script&gt;console.log(' . json_encode($end$, JSON_HEX_TAG) . ');&lt;/script&gt;';" description="Outputs to console" toReformat="false" toShortenFQNames="true">
   <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
   <context>
     <option name="PHP" value="true" />
